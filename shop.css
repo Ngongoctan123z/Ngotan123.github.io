@@ -1,0 +1,283 @@
+/* Thiết lập font mặc định cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1edef;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #161010;
+}
+
+/* Phần header */
+.header {
+    background-color: #1a1d1a;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+/* Icon cho menu */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+/* Phần container chứa nội dung */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1b0215;
+    color: #fff;
+    padding: 15px;
+    width: 180px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -200px; /* Sidebar ẩn ban đầu */
+    transition: left 0.3s;
+}
+
+/* Menu trong sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Phần container chứa nội dung bên trong */
+.content-container {
+    margin-left: auto; /* Căn giữa nội dung */
+    margin-right: auto; /* Căn giữa nội dung */
+    padding: 20px;
+    flex: 1;
+}
+
+/* Ẩn phần nội dung ban đầu */
+.content {
+    display: none;
+}
+
+/* Phần footer */
+/* Phần footer */
+.footer {
+    background-color: #111411;
+    color: #be0d0d;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Phần đơn đã mua */
+/* Phần footer */
+
+
+/* Phần đơn đã mua */
+
+
+/* Phần sản phẩm */
+.product {
+    background-color: #ecf3f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(207, 11, 11, 0.1);
+    text-align: center;
+    width: calc(33.33% - 20px); /* Chia ra làm 3 cột và trừ khoảng cách giữa chúng */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào chiều rộng */
+}
+
+.product img {
+    max-width: 50px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    color: #121301;
+    font-weight: bold;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: calc(33.33% - 10px); /* Chia 1/3 của phần tử cha và trừ đi khoảng cách giữa các sản phẩm */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .product {
+        width: calc(50% - 10px); /* Hiển thị 2 cột trên màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100%; /* Hiển thị 1 cột trên màn hình nhỏ nhất */
+    }
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    color: #010a01;
+}
+
+/* Phần nội dung */
+.content {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto; /* Căn giữa */
+    padding: 20mm;
+    background-color: #f4f7ec;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+/* Phần thông tin nạp tiền và mã QR */
+.nap-tien-info,
+.qr-code {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+/* Form rút tiền */
+.rut-tien-form {
+    background-color: #f1edef;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(207, 11, 11, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Căn giữa */
+    text-align: left; /* Căn trái */
+}
+
+.rut-tien-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rut-tien-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.rut-tien-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2C3E50;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.rut-tien-form button:last-child {
+    margin-right: 0; /* Xóa margin từ nút cuối cùng */
+}
+.don-da-mua {
+    background-color: #f1edef;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(207, 11, 11, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Căn giữa */
+}
+/* Phần giới thiệu */
+#gioi-thieu {
+    background-color: #f1edef;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 20px auto; /* Căn giữa */
+}
+
+#gioi-thieu h3 {
+    color: #333;
+}
+
+#gioi-thieu p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#gioi-thieu .invite-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Phần liên hệ */
+.lien-he {
+    background-color: #f1edef;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Căn giữa */
+}
+
+.lien-he h3 {
+    color: #333;
+}
+
+.lien-he p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.lien-he .contact-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
